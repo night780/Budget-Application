@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class BudgetApp {
+
     public static void main(String[] args) {
         HashMap<String, Double> budget = new HashMap<>();
         budget.put("Income", 0.0);
