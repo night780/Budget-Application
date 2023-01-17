@@ -1,10 +1,30 @@
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
+/**
+ *
+ * Budget App
+ *
+ * This is a simple budgeting application written in Java that allows users to track their income and expenses,
+ * set financial goals, and generate reports on their spending patterns.
+ *
+ * @author Jacob Jonas
+ * @version 1.0
+ */
 public class BudgetApp {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
+        // Create a hashmap to store income and expenses
         HashMap<String, Double> budget = new HashMap<>();
+
+        // This is creating a hashmap with the keys "Income", "Housing", "Transportation", "Food", "Entertainment", and
+        // "Savings" and setting their values to 0.0.
         budget.put("Income", 0.0);
         budget.put("Housing", 0.0);
         budget.put("Transportation", 0.0);
@@ -41,5 +61,26 @@ public class BudgetApp {
         System.out.print("Enter your monthly entertainment expenses: ");
         double entertainment = input.nextDouble();
         budget.put("Entertainment", entertainment);
+
+        // Calculate the remaining income for savings
+        double savings = income - housing - transportation - food - entertainment;
+        budget.put("Savings", savings);
+
+        // Print out the budget summary
+        System.out.println("Budget Summary:");
+        for (Map.Entry<String, Double> entry : budget.entrySet()) {
+            System.out.println(entry.getKey() + ": $" + entry.getValue());
+        }
+
+        // Print out the percentage of income spent on each category
+        System.out.println("\nPercentage of Income Spent:");
+        System.out.println("Housing: " + (housing / income) * 100 + "%");
+        System.out.println("Transportation: " + (transportation / income) * 100 + "%");
+        System.out.println("Food: " + (food / income) * 100 + "%");
+        System.out.println("Entertainment: " + (entertainment / income) * 100 + "%");
+        System.out.println("Savings: " + (savings / income) * 100 + "%");
+
+        // Close the scanner
+        input.close();
     }
 }
