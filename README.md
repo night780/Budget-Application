@@ -1,4 +1,4 @@
-##Budget App
+<h2>Budget App</h2>
 
 This is a simple budgeting application written in Java that allows users to track their income and expenses, set financial goals, and generate reports on their spending patterns.
 How to use
@@ -8,6 +8,8 @@ How to use
     The program will then calculate the remaining income for savings and store all the values in a hashmap.
     The program will then print out a budget summary, showing the dollar amount for each category and the percentage of income spent on each category.
     You can use this information to track your spending and make adjustments to your budget as needed.
+
+<img src="images/img.png" alt="Budget App" width="70%" height="70%">
 
 Requirements
 

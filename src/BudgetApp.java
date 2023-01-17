@@ -67,11 +67,13 @@ public class BudgetApp {
         budget.put("Savings", savings);
 
         // Print out the budget summary
+        System.out.println();
+        System.out.println("--------------------");
         System.out.println("Budget Summary:");
         for (Map.Entry<String, Double> entry : budget.entrySet()) {
             System.out.println(entry.getKey() + ": $" + entry.getValue());
         }
-
+        System.out.println("--------------------");
         // Print out the percentage of income spent on each category
         System.out.println("\nPercentage of Income Spent:");
         System.out.println("Housing: " + (housing / income) * 100 + "%");
