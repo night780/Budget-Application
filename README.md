@@ -9,7 +9,7 @@ How to use
     The program will then print out a budget summary, showing the dollar amount for each category and the percentage of income spent on each category.
     You can use this information to track your spending and make adjustments to your budget as needed.
 
-<img src="images/img.png" alt="Budget App" width="70%" height="70%">
+<img src="images/image.png" alt="Budget App" width="70%" height="70%">
 
 Requirements
 

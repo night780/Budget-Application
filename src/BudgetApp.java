@@ -31,6 +31,8 @@ public class BudgetApp {
         budget.put("Food", 0.0);
         budget.put("Entertainment", 0.0);
         budget.put("Savings", 0.0);
+        budget.put("Pets", 0.0);
+        budget.put("Utilities", 0.0);
 
         // Create a scanner to read input from the user
         Scanner input = new Scanner(System.in);
@@ -62,6 +64,17 @@ public class BudgetApp {
         double entertainment = input.nextDouble();
         budget.put("Entertainment", entertainment);
 
+        // This is prompting the user to enter their monthly pets expenses.
+                System.out.print("Enter your monthly pets expenses: ");
+        double pets = input.nextDouble();
+        budget.put("Pets", pets);
+
+        // This is prompting the user to enter their monthly utilities expenses.
+        System.out.print("Enter your monthly utilities expenses: ");
+        double utilities = input.nextDouble();
+        budget.put("Utilities", utilities);
+
+
         // Calculate the remaining income for savings
         double savings = income - housing - transportation - food - entertainment;
         budget.put("Savings", savings);
@@ -80,6 +93,8 @@ public class BudgetApp {
         System.out.println("Transportation: " + (transportation / income) * 100 + "%");
         System.out.println("Food: " + (food / income) * 100 + "%");
         System.out.println("Entertainment: " + (entertainment / income) * 100 + "%");
+        System.out.println("Pets: " + (pets / income) * 100 + "%");
+        System.out.println("Utilities: " + (utilities / income) * 100 + "%");
         System.out.println("Savings: " + (savings / income) * 100 + "%");
 
         // Close the scanner
